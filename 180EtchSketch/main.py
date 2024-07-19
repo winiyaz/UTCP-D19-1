@@ -6,6 +6,9 @@ from turtle import Turtle, Screen
 
 to = Turtle()  # Initialize Turtle Class
 to.sc = Screen()  # Initialize Screen Class
+to.sc.title("PantySmell")
+to.sc.setup(800, 600)
+to.speed("fastest")  # Speed of turtle
 
 
 # Turtle graphics initialize
