@@ -14,10 +14,28 @@ def to_init():
 	to.shapesize(stretch_wid=3, stretch_len=3, outline=1)  # Setting size params
 	to.sc.bgcolor("#020617")  # Set Bg Color
 
+
 to_init()  # Initialize the turtle
 
-# Screen Listener
 
+# Work will be done here
+
+def mo_fo():
+	"""Moving forward Function"""
+	to.color("#FF0080")
+	to.setheading(0)
+	to.forward(50)
+
+def mo_ba():
+	"""Moving backward"""
+	to.color("#FFFF80")
+	to.setheading(180)  # This turns the head letting it go backward
+	to.forward(50)
+
+
+to.sc.listen()  # Initialize the screen listener function
+to.sc.onkey(mo_fo, "w")
+to.sc.onkey(mo_ba, "e")
 
 # --- Exiting on click function
 to.sc.exitonclick()
