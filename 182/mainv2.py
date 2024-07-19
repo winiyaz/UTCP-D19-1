@@ -2,6 +2,7 @@
 
 import random as rp
 from turtle import Screen, Turtle
+
 from rich import print as rprint
 
 sc = Screen()
@@ -28,13 +29,24 @@ rprint(f'Entered Input {user_bet}')
 
 y_pos = [-100, -40, -5, 100, 160, 260]
 
-for tu_in in range(0, 6):
-	to = Turtle(shape="turtle")
-	to.shapesize(stretch_wid=3, stretch_len=3, outline=1)
-	to.penup()
-	to.color(rp.choice(neon_colors))
-	to.goto(x=-350, y=y_pos[tu_in])
+is_race_on = False  # For While Loop
 
+all_turtles = []
+
+for tu_in in range(0, 6):
+	ne_tu = Turtle(shape="turtle")
+	ne_tu.shapesize(stretch_wid=3, stretch_len=3, outline=1)
+	ne_tu.penup()
+	ne_tu.color(rp.choice(neon_colors))
+	ne_tu.goto(x=-350, y=y_pos[tu_in])
+	all_turtles.append(ne_tu)
+
+if user_bet:
+	is_race_on = True
+
+while is_race_on:
+	rand_distance = rp.randint(0, 10)
+	to.forward(rand_distance)
 
 # Exiting on click
 sc.exitonclick()
