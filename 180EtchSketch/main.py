@@ -26,11 +26,13 @@ def mo_fo():
 	to.setheading(0)
 	to.forward(50)
 
+
 def mo_ba():
 	"""Moving backward"""
 	to.color("#FFFF80")
 	to.setheading(180)  # This turns the head letting it go backward
 	to.forward(50)
+
 
 def mo_up():
 	"""Moing Up"""
@@ -38,18 +40,28 @@ def mo_up():
 	to.color("#FFAA80")
 	to.forward(50)
 
+
 def mo_do():
-	"""Moing Up"""
+	"""Moing down"""
 	to.setheading(270)
 	to.color("#FF5580")
 	to.forward(50)
 
 
+def cl_sc():
+	"""Clearing the screen function"""
+	to.clear()
+	to.penup()
+	to.home()
+	to.pendown()
+
+
 to.sc.listen()  # Initialize the screen listener function
-to.sc.onkey(mo_fo, "w")
-to.sc.onkey(mo_ba, "e")
-to.sc.onkey(mo_up, "r")
-to.sc.onkey(mo_do, "t")
+to.sc.onkey(mo_fo, "w")  # forward
+to.sc.onkey(mo_ba, "e")  # backward
+to.sc.onkey(mo_up, "r")  # up
+to.sc.onkey(mo_do, "t")  # Down
+to.sc.onkey(cl_sc, "c")
 
 # --- Exiting on click function
 to.sc.exitonclick()
