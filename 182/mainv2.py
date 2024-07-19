@@ -1,6 +1,7 @@
 # main.py giving trouble so rewriting the code here
 
 import random as rp
+import turtle
 from turtle import Screen, Turtle
 
 from rich import print as rprint
@@ -27,7 +28,7 @@ neon_colors = [
 user_bet = sc.textinput(title="Makbet", prompt="Colo?")  # Catching an input
 rprint(f'Entered Input {user_bet}')
 
-y_pos = [-100, -40, -5, 100, 160, 260]
+y_pos = [-150, -30, -15, 100, 160, 260]
 
 is_race_on = False  # For While Loop
 
@@ -45,8 +46,18 @@ if user_bet:
 	is_race_on = True
 
 while is_race_on:
-	rand_distance = rp.randint(0, 10)
-	to.forward(rand_distance)
+
+	for tu in all_turtles:
+		if tu.xcor() > 350:
+			is_race_on = False
+			winning_color = turtle.pencolor()
+			if winning_color == user_bet:
+				rprint(f'Won {winning_color}')
+			else:
+				rprint(f'lost {winning_color}')
+
+		rand_distance = rp.randint(0, 10)
+		tu.forward(rand_distance)
 
 # Exiting on click
 sc.exitonclick()
