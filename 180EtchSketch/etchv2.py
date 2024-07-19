@@ -7,7 +7,9 @@ to = Turtle()  # Initialize Turtle Class
 to.sc = Screen()  # Initialize Screen Class
 to.sc.title("PantySmell")
 to.sc.setup(800, 600)
+to.sc.bgpic("2.gif")
 to.speed("fastest")  # Speed of turtle
+to.pensize(50)
 
 
 # Turtle graphics initialize
