@@ -59,5 +59,5 @@ while is_race_on:
 		rand_distance = rp.randint(0, 10)
 		tu.forward(rand_distance)
 
-# Exiting on click
+# Exiting on click ##
 sc.exitonclick()
