@@ -26,7 +26,7 @@ neon_colors = [
 user_bet = sc.textinput(title="Makbet", prompt="Colo?")  # Catching an input
 rprint(f'Entered Input {user_bet}')
 
-y_pos = [-90, -40, -10, 90, 60, 30]
+y_pos = [-100, -40, -5, 100, 160, 260]
 
 for tu_in in range(0, 6):
 	to = Turtle(shape="turtle")
